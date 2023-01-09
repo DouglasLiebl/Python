@@ -8,8 +8,7 @@ c = int(input("Forneça o valor de 'c': "))
 deltar = 0
 
 def delta (a):
-    deltaR = int(math.pow(b, 2) + 4 * a * c)
-    return deltaR
+    return int(math.pow(b, 2) + 4 * a * c)
 
 def raiz (a):
     raiz1 = (-b + math.isqrt(delta(a))) / (2 * a)
