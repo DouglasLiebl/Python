@@ -38,8 +38,8 @@ while cont < len(listaAltura) and cont < len(listaPeso):
     if listaPeso[cont] < menorPeso:
         menorPeso = listaPeso[cont]
         codeMeP = cont
-    somaAlt = somaAlt + listaAltura[cont]
-    somaP = somaP + listaPeso[cont]
+    somaAlt += listaAltura[cont]
+    somaP += listaPeso[cont]
     cont += 1
 
 mediaAlt = somaAlt / len(listaAltura)
