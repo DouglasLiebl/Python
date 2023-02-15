@@ -16,9 +16,9 @@ media = 0
 notasAbaixo7 = 0
 notasAcimaMedia = 0
 n = 0
-continuar = True
+continuar = 1
 
-while continuar:
+while continuar == 1:
     while n != -1:
         n = float(input("Insira o valor da nota: "))
         if n == -1:
@@ -49,8 +49,10 @@ while continuar:
     continuar = input("Calculos finalizados! \nDeseja digitar um novo conjunto de notas? [S/N]: ")
     
     match continuar:
-        case "S":
-            continuar = True
-        case "N":
-            continuar = False
+        case 'S':
+            continuar = 1
+            notas.clear
+            n = 0
+        case 'N':
+            continuar = 0
     
