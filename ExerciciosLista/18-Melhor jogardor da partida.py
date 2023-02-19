@@ -44,7 +44,7 @@ while n != 0:
         n = int(input("ERRO: Número de jogador inválido \nNúmero do jogador (0 = fim): "))
     if n == 0:
         break
-    votosPorJog[numerosJog.index(n)] += 1
+    votosPorJog[n-1] += 1
     totalVotos += 1
 
 maisVotos = votosPorJog[0]
@@ -52,7 +52,6 @@ cont = 0
 print(f"Jogador    Votos      Percentual")
 while cont < len(numerosJog):
     if votosPorJog[cont] >  0:
-        percentual(totalVotos,votosPorJog[cont])
         percentualDeVoto[cont] += percentual(totalVotos,votosPorJog[cont])
         print(f"{numerosJog[cont]:<10} {votosPorJog[cont]:<10} {percentualDeVoto[cont]:,.1f}")
         if votosPorJog[cont] > maisVotos:
