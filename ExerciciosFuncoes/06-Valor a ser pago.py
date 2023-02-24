@@ -13,6 +13,7 @@ def valorPagamento(prestacao, atraso):
 stop = False
 totalPagoDia = 0
 nPagamentosDia = 0
+
 print("[Insira prestação = 0 para encerrar o programa]")
 while stop == False:
     prestacao = float(input("Insira o valor da prestação: "))

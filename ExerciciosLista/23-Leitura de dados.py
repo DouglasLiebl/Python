@@ -42,6 +42,7 @@ with open('usuarios.txt','r') as arquivo:
         arquivo.write(str("ACME Inc.               Uso do espaço em disco pelos usuário \n------------------------------------------------------------------------ \nNr.  Usuário        Espaço utilizado     %do uso\n"))
         espacoTotal = conversor(sum(espaco))
         espacoMedio = espacoTotal / len(usuario)
+        
         for i in range(0, len(usuario)):
             arquivo.write(str(f"{i + 1:<4} {usuario[i].strip():<10} {conversor(espaco[i]):>11,.2f} MB {percentual(espacoTotal, conversor(espaco[i])):>16,.2f}%\n"))
         arquivo.write(str(f"\nEspaço total ocupado: {espacoTotal:,.2f} MB \nEspaço médio ocupado: {espacoMedio:,.2f} MB"))
