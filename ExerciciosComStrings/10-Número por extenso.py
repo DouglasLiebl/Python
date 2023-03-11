@@ -7,4 +7,4 @@ def extenso(numero):
     return numero
 
 numero = int(input("Insira um número: "))
-print(extenso(numero).title())
+print(extenso(numero).capitalize())
